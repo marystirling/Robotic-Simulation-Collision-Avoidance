@@ -1,4 +1,5 @@
 Progress Report 1
+
 January 28, 2022
 
   I have begun finalizing planning for my senior project. I want to do a robotic collision avoidance simulation using a software called Webots. The goal by the end of it is if the three-wheeled robot is successfully able to navigate around obstacles to reach target destinations. It will be in an outdoor environment. I have experience using LiDAR sensors so I most likely will implement those. However, I may look into different sensors and experiment with different kinds. Some of the current collision avoidance algorithms that I am researching are artificial potential fields and line-edge detection. I plan to use them to either combine features of them into an efficient collision avoidance algorithm or create my own from scratch. 
