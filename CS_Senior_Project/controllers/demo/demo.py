@@ -1,8 +1,8 @@
-"""go_forward controller."""
-#!/usr/bin/env python3.8
+"""demo controller."""
+#!/usr/bin/env python3.9
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
-from controller import Robot, Motor
+from controller import Robot
 
 # create the Robot instance.
 robot = Robot()
@@ -12,21 +12,15 @@ timestep = 64
 
 MAX_SPEED = 6.28
 
+leftMotor = robot.getDevice('frontLeftWheel')
+rightMotor = robot.getDevice('frontRightWheel')
+leftMotor.setVelocity(0.1 * MAX_SPEED)
+rightMotor.setVelocity(0.1 * MAX_SPEED)
 # You should insert a getDevice-like function in order to get the
 # instance of a device of the robot. Something like:
 #  motor = robot.getDevice('motorname')
 #  ds = robot.getDevice('dsname')
 #  ds.enable(timestep)
-
-left_motor = robot.getDevice('left wheel motor')
-right_motor = robot.getDevice('right wheel motor')
-    
-left_motor.setPosition(10.0)
-right_motor.setPosition(10.0)
-    
-    
-left_motor.setVelocity(0.0)
-right_motor.setVelocity(0.0)
 
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
