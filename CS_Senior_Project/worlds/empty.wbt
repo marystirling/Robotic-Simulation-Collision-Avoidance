@@ -1310,5 +1310,5 @@ Robot {
   }
   physics Physics {
   }
-  controller "go_forward"
+  controller "my_controller_lidar"
 }
