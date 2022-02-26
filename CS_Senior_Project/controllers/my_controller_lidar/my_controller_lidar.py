@@ -30,7 +30,7 @@ def run_robot(robot, my_lidar):
     right_motor.setVelocity(0.0)
     
     # Lidar
-    lidar = robot.getLidar('lidar')
+    lidar = robot.getDevice('lidar')
     lidar.enable(timestep)
     lidar.enablePointCloud()
     
