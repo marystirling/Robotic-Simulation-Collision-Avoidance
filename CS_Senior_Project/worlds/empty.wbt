@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.36720952165315096 0.3612916931925772 0.8571029574311975 1.7404288753000288
-  position 0.02591155841880649 -1.083786873934632 1.1209643539254057
+  orientation -0.3112197336571187 0.3899993457912482 0.8666272483973664 1.4883993052573303
+  position -0.20520559213873693 -1.259214144834617 1.0147290133550835
 }
 TexturedBackground {
 }
@@ -12,9 +12,11 @@ TexturedBackgroundLight {
 RectangleArena {
   translation 0.19 0 0
   rotation 0 1 0 0
+  floorSize 5 5
+  wallHeight 0.4
 }
 WoodenBox {
-  translation 0.37 0.18 0.06
+  translation 0.37 0.3 0.06
   size 0.1 0.1 0.1
 }
 Robot {
@@ -24,9 +26,10 @@ Robot {
     }
     Lidar {
       translation 0.06 0 0.02
+      horizontalResolution 25
       fieldOfView 1.57
       numberOfLayers 1
-      maxRange 2
+      maxRange 5
     }
     DEF right_ir_led Transform {
       translation 0.05 -0.034 0.048
