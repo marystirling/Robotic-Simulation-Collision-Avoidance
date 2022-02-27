@@ -87,11 +87,7 @@ def run_robot(robot):
             point_tuple  = (point_degree, range_image[0])
             distance_list.append(point_tuple)
             print(point_tuple)
-        #print(range_image)
-        #print(my_lidar.x)
-        #point_tuple = (my_lidar.x, my_lidar.y, my_lidar.z, my_lidar.layer_id, my_lidar.time)
-        #print(point_tuple)
-        #print("{}".format(range_image[0]))
+        
         #if range_image[0] != float('inf'):
             #if range_image[0] < 2:
                 #print(f"distance is {range_image[0]} meters")
