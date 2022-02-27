@@ -4,7 +4,7 @@
 #  from controller import Robot, Motor, DistanceSensor
 from controller import Robot
 from controller import Lidar
-from controller import LidarPoint
+#from controller import LidarPoint
 import math
 
 
@@ -83,11 +83,11 @@ def run_robot(robot):
         
         print(f"the distance from an object is: {range_image[0]}")
         
-        if range_image[0] != float('inf'):
-            point_tuple  = (point_degree, range_image[0])
-            distance_list.append(point_tuple)
-            print(point_tuple)
-        
+   #     if range_image[0] != float('inf'):
+        point_tuple  = (point_degree, range_image[0])
+        distance_list.append(point_tuple)
+        print(point_tuple)
+       
         #if range_image[0] != float('inf'):
             #if range_image[0] < 2:
                 #print(f"distance is {range_image[0]} meters")

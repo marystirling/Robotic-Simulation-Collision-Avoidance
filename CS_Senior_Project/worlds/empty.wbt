@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.07216638735267933 0.8836847351715245 -0.4624860012598174 0.34951545685653684
-  position -1.405076970648991 0.01686187693950661 0.5296448563051507
+  orientation -0.3583408698263345 0.8165900514337037 0.4525179652915532 1.5400843527716805
+  position 0.22575247995099124 -0.2995740561186011 1.5030457332413283
 }
 TexturedBackground {
 }
@@ -16,7 +16,7 @@ RectangleArena {
   wallHeight 0.4
 }
 WoodenBox {
-  translation 0.37 0.3 0.06
+  translation 0.37 0.31 0.06
   size 0.1 0.1 0.1
 }
 Robot {
@@ -26,7 +26,7 @@ Robot {
     }
     Lidar {
       translation 0.06 0 0.02
-      horizontalResolution 25
+      horizontalResolution 3
       fieldOfView 1.57
       numberOfLayers 1
       maxRange 5
