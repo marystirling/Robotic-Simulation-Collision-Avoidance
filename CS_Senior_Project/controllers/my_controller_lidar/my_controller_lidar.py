@@ -35,28 +35,33 @@ def run_robot(robot):
     lidar.enable(timestep)
     lidar.enablePointCloud()
     
+    # horizontalResolution is how many distance points are calculated in one layer
     horizontalResolution = lidar.getHorizontalResolution();
-    numberOfLayers = lidar.getNumberOfLayers();
     print(f"horizontal resolution: {horizontalResolution}")
+    
+    # numberOfLayers is how many layers distance readings will be done on
+    numberOfLayers = lidar.getNumberOfLayers();
+ 
     print(f"number of layers: {numberOfLayers}")
     
+    # fov is the field of view of LiDAR distance readings
     fov = lidar.getFov()
     print(f"field of view: {fov}")
     
+    # degrees is the exact degrees from the robot with fov range
     degrees = fov * 180 / math.pi
     print(f"degrees in field of view: {degrees}")
     
+    # creates an empty list of distance measurements
     distance_list = []
     
+    # calculates the angle between each laser within the fov
     split_degrees = degrees / horizontalResolution
     print(f"the angle between each laser is: {split_degrees}")
     
     counter = 0
     
-    #fov = lidar.getFov(lidar)
-    
-    
-    
+  
     # Main loop:
     # - perform simulation steps until Webots is stopping the controller
     while robot.step(timestep) != -1:
@@ -74,16 +79,20 @@ def run_robot(robot):
         range_image = lidar.getRangeImage()
 
             #print(f"the get range position 1 is {range_image[0]}")
-         
+        
+        # laser_counter keeps track of what distance angle measurement in each layer
         laser_counter = counter % horizontalResolution + 1
         print(laser_counter)
         
+        # point_degree is the degree of each laser distance measurmeent within each layer
         point_degree = split_degrees * laser_counter
         print(point_degree)
         
         print(f"the distance from an object is: {range_image[0]}")
         
    #     if range_image[0] != float('inf'):
+        
+        # point_tuple keeps track of the degree of each distance measurement and the distance of that point
         point_tuple  = (point_degree, range_image[0])
         distance_list.append(point_tuple)
         print(point_tuple)
