@@ -77,6 +77,7 @@ def run_robot(robot):
     # Print out the x, y, z, and layer information for the first point in the point cloud    
         #print("x: " + str(lidarPoints[0].x) + " y: " + str(lidarPoints[0].y) + " z: " + str(lidarPoints[0].z) + " layer: " + str(lidarPoints[0].layer_id))
         range_image = lidar.getRangeImage()
+        #print(range_image)
 
             #print(f"the get range position 1 is {range_image[0]}")
         
@@ -88,7 +89,7 @@ def run_robot(robot):
         point_degree = split_degrees * laser_counter
         print(point_degree)
         
-        print(f"the distance from an object is: {range_image[0]}")
+        print(f"the distance from an object is: {range_image[laser_counter -1]}")
         
    #     if range_image[0] != float('inf'):
         
