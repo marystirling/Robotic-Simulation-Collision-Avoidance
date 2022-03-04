@@ -7,12 +7,29 @@ from controller import GPS
 
 # create the Robot instance.
 robot = Robot()
+max_speed = 6.28
 
-gps = robot.getDevice("gps")
-print(gps)
+
+
 
 # get the time step of the current world.
 timestep = int(robot.getBasicTimeStep())
+
+
+gps = robot.getDevice("gps")
+gps.enable(timestep)
+
+left_motor = robot.getDevice('left wheel motor')
+right_motor = robot.getDevice('right wheel motor')
+    
+left_motor.setPosition(10.0)
+right_motor.setPosition(10.0)
+    
+    
+left_motor.setVelocity(0.0)
+right_motor.setVelocity(0.0)
+
+
 
 # You should insert a getDevice-like function in order to get the
 # instance of a device of the robot. Something like:
@@ -23,10 +40,18 @@ timestep = int(robot.getBasicTimeStep())
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
 while robot.step(timestep) != -1:
+
+    
+
+    currValue = gps.getValues()
+    print(currValue)
+    
+    left_motor.setVelocity(max_speed*0.25)
+    right_motor.setVelocity(max_speed*0.25)
     # Read the sensors:
     # Enter here functions to read sensor data, like:
     #  val = ds.getValue()
-
+    #print(gps.getCoordinateSystem())
     # Process sensor data here.
 
     # Enter here functions to send actuator commands, like:
