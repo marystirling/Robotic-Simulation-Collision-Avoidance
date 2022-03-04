@@ -4,7 +4,6 @@
 #  from controller import Robot, Motor, DistanceSensor
 from controller import Robot
 from controller import Lidar
-#from controller import LidarPoint
 import math
 
 
