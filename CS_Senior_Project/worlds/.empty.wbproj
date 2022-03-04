@@ -6,6 +6,6 @@ minimizedPerspectives: 000000ff00000000fd0000000200000001000002980000042efc02000
 maximizedDockId: -1
 centralWidgetVisible: 1
 orthographicViewHeight: 1
-textFiles: 3 "../../../../../../Program Files/Webots/projects/robots/parallax/boebot/controllers/boebot/boebot.c" "controllers/HelloWorld/HelloWorld.py" "controllers/go_forward/go_forward.py" "controllers/my_controller_lidar/my_controller_lidar.py"
+textFiles: 4 "../../../../../../Program Files/Webots/projects/robots/parallax/boebot/controllers/boebot/boebot.c" "controllers/HelloWorld/HelloWorld.py" "controllers/go_forward/go_forward.py" "controllers/my_controller_lidar/my_controller_lidar.py" "controllers/gps_controller/gps_controller.py" "controllers/compass_controller/compass_controller.py"
 globalOptionalRendering: LidarRaysPaths::LidarPointClouds
 consoles: Console:All:All

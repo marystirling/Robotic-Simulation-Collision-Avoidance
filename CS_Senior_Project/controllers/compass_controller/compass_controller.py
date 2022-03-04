@@ -41,7 +41,7 @@ right_motor.setVelocity(0.0)
 # - perform simulation steps until Webots is stopping the controller
 while robot.step(timestep) != -1:
 
-    
+    print(compass.getValues())
     
     left_motor.setVelocity(max_speed*0.25)
     right_motor.setVelocity(max_speed*0.25)

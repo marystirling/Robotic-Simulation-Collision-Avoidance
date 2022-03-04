@@ -1323,5 +1323,5 @@ Robot {
   }
   physics Physics {
   }
-  controller "my_controller_lidar"
+  controller "compass_controller"
 }
