@@ -6,6 +6,6 @@ minimizedPerspectives: 000000ff00000000fd0000000200000001000002980000042efc02000
 maximizedDockId: -1
 centralWidgetVisible: 1
 orthographicViewHeight: 1
-textFiles: 7 "../../../../../../Program Files/Webots/projects/robots/parallax/boebot/controllers/boebot/boebot.c" "controllers/my_controller_lidar/my_controller_lidar.py" "controllers/robot_movements/robot_movements.py" "controllers/gps_controller/gps_controller.py" "controllers/compass_controller/compass_controller.py" "controllers/go_forward/go_forward.py" "controllers/time_angle_measurement/time_angle_measurement.py" "controllers/test_simulator_webots/test_simulator_webots.c"
+textFiles: 5 "../../../../../../Program Files/Webots/projects/robots/parallax/boebot/controllers/boebot/boebot.c" "controllers/my_controller_lidar/my_controller_lidar.py" "controllers/robot_movements/robot_movements.py" "controllers/gps_controller/gps_controller.py" "controllers/compass_controller/compass_controller.py" "controllers/go_forward/go_forward.py" "controllers/time_angle_measurement/time_angle_measurement.py"
 globalOptionalRendering: LidarRaysPaths::LidarPointClouds
 consoles: Console:All:All

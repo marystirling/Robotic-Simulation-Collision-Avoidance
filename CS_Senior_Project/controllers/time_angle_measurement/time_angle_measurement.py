@@ -98,8 +98,11 @@ def run_robot(robot):
         print(point_tuple)
         
         left_motor.setPosition(17.78)
+        
+        
         right_motor.setPosition(17.78)
-        left_motor.setVelocity(max_speed)
+        #left_motor.setVelocity(max_speed)
+        right_motor.setVelocity(max_speed)
         #while range_image[0] < 1:
          #   left_motor.setVelocity(0.5*max_speed)
         #if range_image[0] != float('inf'):
