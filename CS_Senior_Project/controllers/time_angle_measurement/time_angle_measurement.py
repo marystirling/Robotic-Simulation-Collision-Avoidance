@@ -22,8 +22,8 @@ def run_robot(robot):
     left_motor = robot.getDevice('left wheel motor')
     right_motor = robot.getDevice('right wheel motor')
     
-    left_motor.setPosition(20.0)
-    right_motor.setPosition(20.0)
+    #left_motor.setPosition(20.0)
+    #right_motor.setPosition(20.0)
     
     
     left_motor.setVelocity(0.0)
@@ -96,7 +96,10 @@ def run_robot(robot):
         point_tuple  = (point_degree, range_image[0])
         distance_list.append(point_tuple)
         print(point_tuple)
-        left_motor.setVelocity(0.5*max_speed)
+        
+        left_motor.setPosition(17.78)
+        right_motor.setPosition(17.78)
+        left_motor.setVelocity(max_speed)
         #while range_image[0] < 1:
          #   left_motor.setVelocity(0.5*max_speed)
         #if range_image[0] != float('inf'):
