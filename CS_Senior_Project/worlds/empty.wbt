@@ -13,6 +13,9 @@ RectangleArena {
   translation 0.19 0 0
   rotation 0 1 0 0
   floorSize 5 5
+  floorAppearance Parquetry {
+    type "light strip"
+  }
   wallHeight 0.4
 }
 WoodenBox {
@@ -30,7 +33,7 @@ Robot {
     }
     Lidar {
       translation 0.06 0 0.02
-      horizontalResolution 25
+      horizontalResolution 1
       fieldOfView 1.57
       numberOfLayers 1
       maxRange 5
@@ -1323,5 +1326,5 @@ Robot {
   }
   physics Physics {
   }
-  controller "compass_controller"
+  controller "time_angle_measurement"
 }
