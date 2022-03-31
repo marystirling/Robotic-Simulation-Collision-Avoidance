@@ -10,7 +10,7 @@ import math
 
 def run_robot(robot):
     # get the time step of the current world.
-    timestep = 32
+    timestep = 5
     max_speed = 6.28
     # You should insert a getDevice-like function in order to get the
     # instance of a device of the robot. Something like:
@@ -96,7 +96,9 @@ def run_robot(robot):
         point_tuple  = (point_degree, range_image[0])
         distance_list.append(point_tuple)
         print(point_tuple)
-       
+        left_motor.setVelocity(0.5*max_speed)
+        #while range_image[0] < 1:
+         #   left_motor.setVelocity(0.5*max_speed)
         #if range_image[0] != float('inf'):
             #if range_image[0] < 2:
                 #print(f"distance is {range_image[0]} meters")
@@ -106,8 +108,8 @@ def run_robot(robot):
     
         # Enter here functions to send actuator commands, like:
         #  motor.setPosition(10.0)
-        left_motor.setVelocity(max_speed*0.25)
-        right_motor.setVelocity(max_speed*0.25)
+        #left_motor.setVelocity(max_speed*0.25)
+        #right_motor.setVelocity(max_speed*0.25)
         
         
         counter = counter + 1
