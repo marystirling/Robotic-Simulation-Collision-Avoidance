@@ -6,7 +6,26 @@ from controller import Robot
 from controller import Lidar
 import math
 
-
+def move_forward(robot, left_motor, right_motor, max_speed):
+    #left_motor = robot.getDevice('left wheel motor')
+    #right_motor = robot.getDevice('right wheel motor')
+    # set the target position of the motors
+    left_motor.setPosition(10.0)
+    right_motor.setPosition(10.0)
+    left_motor.setVelocity(max_speed)
+    right_motor.setVelocity(max_speed)
+    print("entered move_function")
+    #left_motor.setVelocity(max_speed)
+    #right_motor.setVelocity(max_speed)
+   
+   
+def turn_left(left_motor, max_speed):
+    left_motor.setPosition(17.91)
+    left_motor.setVelocity(max_speed)
+ 
+def turn_right(right_motor, max_speed):
+    right_motor.setPosition(17.91)
+    right_motor.setVelocity(max_speed)
 
 def run_robot(robot):
     # get the time step of the current world.
@@ -22,104 +41,47 @@ def run_robot(robot):
     left_motor = robot.getDevice('left wheel motor')
     right_motor = robot.getDevice('right wheel motor')
     
-    #left_motor.setPosition(20.0)
-    #right_motor.setPosition(20.0)
+    left_motor.setPosition(20.0)
+    right_motor.setPosition(20.0)
     
     
-    left_motor.setVelocity(0.0)
-    right_motor.setVelocity(0.0)
+    #left_motor.setVelocity(0.0)
+    #right_motor.setVelocity(0.0)
+    left_motor.setVelocity(10.0)
+    right_motor.setVelocity(10.0)
     
-    # Lidar
-    lidar = robot.getDevice('lidar')
-    lidar.enable(timestep)
-    lidar.enablePointCloud()
-    
-    # horizontalResolution is how many distance points are calculated in one layer
-    horizontalResolution = lidar.getHorizontalResolution();
-    print(f"horizontal resolution: {horizontalResolution}")
-    
-    # numberOfLayers is how many layers distance readings will be done on
-    numberOfLayers = lidar.getNumberOfLayers();
  
-    print(f"number of layers: {numberOfLayers}")
     
-    # fov is the field of view of LiDAR distance readings
-    fov = lidar.getFov()
-    print(f"field of view: {fov}")
     
-    # degrees is the exact degrees from the robot with fov range
-    degrees = fov * 180 / math.pi
-    print(f"degrees in field of view: {degrees}")
-    
-    # creates an empty list of distance measurements
-    distance_list = []
-    
-    # calculates the angle between each laser within the fov
-    split_degrees = degrees / horizontalResolution
-    print(f"the angle between each laser is: {split_degrees}")
-    
-    counter = 0
-    
-  
+
     # Main loop:
     # - perform simulation steps until Webots is stopping the controller
     while robot.step(timestep) != -1:
         
-
-        
+        #move_forward(robot, left_motor, right_motor, max_speed)
+        #turn_left(left_motor, max_speed)
+        #turn_right(right_motor, max_speed)
        
-        # Read the sensors:
-        # Enter here functions to read sensor data, like:
-        #  val = ds.getValue()
-        lidarPoints = lidar.getPointCloud(); # Get the point cloud
-
-    # Print out the x, y, z, and layer information for the first point in the point cloud    
-        #print("x: " + str(lidarPoints[0].x) + " y: " + str(lidarPoints[0].y) + " z: " + str(lidarPoints[0].z) + " layer: " + str(lidarPoints[0].layer_id))
-        range_image = lidar.getRangeImage()
-        #print(range_image)
-
-            #print(f"the get range position 1 is {range_image[0]}")
-        
-        # laser_counter keeps track of what distance angle measurement in each layer
-        laser_counter = counter % horizontalResolution + 1
-        print(laser_counter)
-        
-        # point_degree is the degree of each laser distance measurmeent within each layer
-        point_degree = split_degrees * laser_counter
-        print(point_degree)
-        
-        print(f"the distance from an object is: {range_image[laser_counter -1]}")
-        
-   #     if range_image[0] != float('inf'):
-        
-        # point_tuple keeps track of the degree of each distance measurement and the distance of that point
-        point_tuple  = (point_degree, range_image[0])
-        distance_list.append(point_tuple)
-        print(point_tuple)
-        
-        left_motor.setPosition(17.91)
-        
-        
-        #right_motor.setPosition(17.78)
-        left_motor.setVelocity(max_speed)
+        print("in while loop")
+        #left_motor.setPosition(17.91)
+        #right_motor.setPosition(17.91)
+        #left_motor.setVelocity(max_speed)
         #right_motor.setVelocity(max_speed)
-        #while range_image[0] < 1:
-         #   left_motor.setVelocity(0.5*max_speed)
-        #if range_image[0] != float('inf'):
-            #if range_image[0] < 2:
-                #print(f"distance is {range_image[0]} meters")
-                #print(fov)
-    
-        # Process sensor data here.
-    
-        # Enter here functions to send actuator commands, like:
-        #  motor.setPosition(10.0)
-        #left_motor.setVelocity(max_speed*0.25)
-        #right_motor.setVelocity(max_speed*0.25)
         
-        
-        counter = counter + 1
+        #move_forward(max_speed, robot)
+        #turn_left(left_motor, max_speed)
+        #move_forward(left_motor, right_motor, max_speed)
+        #turn_right(right_motor, max_speed)
 
+        # set up the motor speeds at 10% of the MAX_SPEED.
+        #left_motor.setVelocity(0.1 * max_speed)
+        #right_motor.setVelocity(0.1 * max_speed)
+        #if point_tuple[1] < 1:
+        #    left_motor.setPosition(17.91)
+        #    left_motor.setVelocity(max_speed)
+
+        
+      
 # Enter here exit cleanup code.
 
 

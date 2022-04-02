@@ -25,8 +25,8 @@ left_motor.setPosition(10.0)
 right_motor.setPosition(10.0)
     
     
-left_motor.setVelocity(0.0)
-right_motor.setVelocity(0.0)
+left_motor.setVelocity(MAX_SPEED)
+right_motor.setVelocity(MAX_SPEED)
 
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
