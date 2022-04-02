@@ -3,7 +3,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation -0.1094134767960016 0.9596712884140765 0.2589588949796422 0.8294892258001839
-  position -0.7285619136769388 -0.1972819867422924 2.8177364036380794
+  position -2.6247001287123846 -0.6353580737301935 4.819694893329356
 }
 TexturedBackground {
 }
@@ -28,8 +28,8 @@ WoodenBox {
   size 0.3 0.3 0.1
 }
 Robot {
-  translation -0.004191819510930406 0.0023335309881046726 0.038391494048145416
-  rotation 0.009668861918484395 0.2404648261844013 0.9706096952314598 -0.08839760416553588
+  translation -0.0011948733667348859 0.012680513319732332 0.038391496768288985
+  rotation -0.010533232512519013 -0.040087455319038366 -0.9991406542318662 0.5190743919751589
   children [
     GPS {
     }
@@ -512,7 +512,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 17.779998892650756
+        position 17.15704895573501
         axis 0 1 0
         anchor 0.025 0 -0.0052
       }
@@ -526,8 +526,8 @@ Robot {
         }
       ]
       endPoint DEF right_wheel Solid {
-        translation 0.025 -0.046 -0.0052
-        rotation 0 -1 0 5.60947233606759
+        translation 0.025 -0.04599999999999999 -0.0052
+        rotation 0 -0.9999999999999999 0 6.232422272983331
         children [
           DEF Cylinder10 Transform {
             translation 0 -0.005 0
@@ -644,13 +644,13 @@ Robot {
           density -1
           mass 0.05
         }
-        linearVelocity 2.661355699162125e-06 1.074232234873236e-05 8.983882871881749e-08
-        angularVelocity -0.00014657244971232107 -2.0776778486809805e-05 4.9355534427660686e-05
+        linearVelocity -0.017697574574494862 0.009922210989534646 4.5373234698332575e-08
+        angularVelocity -0.30745301440587913 -0.5476067613807231 -0.4368283193345793
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 1.0609505717083836e-06
+        position 0.6229505947811083
         axis 0 1 0
         anchor 0.025 0 -0.0052
       }
@@ -665,7 +665,7 @@ Robot {
       ]
       endPoint DEF left_wheel Solid {
         translation 0.025 0.0468861 -0.0052
-        rotation 0 1 0 0.4000010609505718
+        rotation 0 1 0 1.0229505947811082
         children [
           DEF Cylinder08 Transform {
             translation 0 -0.005 0
@@ -779,8 +779,8 @@ Robot {
           density -1
           mass 0.05
         }
-        linearVelocity -4.859858727884582e-06 -6.516761079854585e-06 6.879885278043883e-08
-        angularVelocity -7.023623625488496e-05 -4.41443582777782e-05 -7.213648523432972e-05
+        linearVelocity 0.01766040671447143 -0.009929358864010428 2.6666638817121068e-08
+        angularVelocity 0.30745371355530093 0.5476087610321736 -0.43676471376263143
       }
     }
     DEF body Transform {
@@ -1338,7 +1338,7 @@ Robot {
   }
   physics Physics {
   }
-  controller "time_angle_measurement"
-  linearVelocity -2.497231124270712e-06 5.228251549996739e-06 2.226934965612347e-06
-  angularVelocity -6.998379234420964e-05 -4.398986923041772e-05 -7.227568311836492e-05
+  controller "simple_movements"
+  linearVelocity 0.0039637698626998515 0.007484451743001523 -4.112405102324687e-08
+  angularVelocity 3.696041325864685e-07 1.1043379462343733e-06 -0.43636418064275584
 }
