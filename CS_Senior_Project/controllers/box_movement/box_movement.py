@@ -22,7 +22,7 @@ if __name__ == "__main__":
     num_side = 4
     length_side = 0.25
     
-    wheel_radius = 0.0665/2
+    wheel_radius = 0.06706/2
     linear_velocity = wheel_radius * max_speed
     
     duration_side = length_side/linear_velocity
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     start_time = robot.getTime()
     
     angle_of_rotation = 6.28/num_side
-    distance_between_wheels = 0.099
+    distance_between_wheels = 0.095
     rate_of_rotation = (2*linear_velocity)/distance_between_wheels
     duration_turn = angle_of_rotation/rate_of_rotation
     
