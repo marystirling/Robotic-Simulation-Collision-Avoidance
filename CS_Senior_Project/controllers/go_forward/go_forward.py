@@ -26,12 +26,12 @@ MAX_SPEED = 6.28
 left_motor = robot.getDevice('left wheel motor')
 right_motor = robot.getDevice('right wheel motor')
     
-left_motor.setPosition(10.0)
-right_motor.setPosition(10.0)
+left_motor.setPosition(17.91)
+right_motor.setPosition(17.91)
     
     
-left_motor.setVelocity(0.0)
-right_motor.setVelocity(0.0)
+left_motor.setVelocity(MAX_SPEED)
+right_motor.setVelocity(MAX_SPEED)
 
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller
@@ -41,7 +41,7 @@ while robot.step(timestep) != -1:
     #  val = ds.getValue()
 
     # Process sensor data here.
-    move_forward()
+    #move_forward()
     # Enter here functions to send actuator commands, like:
     #  motor.setPosition(10.0)
     pass
