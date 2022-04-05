@@ -56,16 +56,14 @@ def run_robot(robot):
         
     start_time = robot.getTime()
     #counter = 0
-    
-    while start_time <= 5:
-            
+
     #left_motor.setPosition(17.91)
-         left_motor.setVelocity(max_speed)
-         current_time = robot.getTime()
-         print(f"start time is: {start_time}")
-         print(f"end time is: {start_time}")
-         duration = current_time - start_time
-         print(f"total time is: {duration}")
+    left_motor.setVelocity(max_speed)
+    current_time = robot.getTime()
+    print(f"start time is: {start_time}")
+    print(f"end time is: {start_time}")
+    duration = current_time - start_time
+    print(f"total time is: {duration}")
     
     left_motor.setVelocity(0.0)
        

@@ -3,7 +3,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
-  position 2.2394872554771548e-06 6.097420004338529e-07 2.1403777478091226
+  position 1.4675176749420966e-06 -1.622297630516403e-07 1.8673684027750999
 }
 TexturedBackground {
 }
@@ -13,9 +13,6 @@ RectangleArena {
   translation 0.19 0 0
   rotation 0 1 0 0
   floorSize 5 5
-  floorAppearance Parquetry {
-    type "light strip"
-  }
   wallHeight 0.4
 }
 WoodenBox {
@@ -29,7 +26,7 @@ WoodenBox {
 }
 Robot {
   translation 0.11811305895490544 0.003034375459892719 0.03822768144402158
-  rotation -0.007649175511744365 0.05397515563407784 -0.9985129807309806 -0.3394864416372947
+  rotation 0 1 0 -0.3394864416372947
   children [
     GPS {
     }
@@ -526,7 +523,7 @@ Robot {
         }
       ]
       endPoint DEF right_wheel Solid {
-        translation 0.025 -0.04599999999999942 -0.0052
+        translation 0.025 -0.045999999999999354 -0.0052
         rotation 0 -1 0 1.3780690362217605
         children [
           DEF Cylinder10 Transform {
@@ -644,8 +641,6 @@ Robot {
           density -1
           mass 0.05
         }
-        linearVelocity 0.20066396348366491 0.07085531126988767 -3.377844304008794e-05
-        angularVelocity -2.0835754131881865 5.902962275789922 0.0049016484329798575
       }
     }
     HingeJoint {
@@ -665,7 +660,7 @@ Robot {
       ]
       endPoint DEF left_wheel Solid {
         translation 0.025 0.0468861 -0.0052
-        rotation 0 -1 0 0.7476990800698384
+        rotation 0 -1 0 0.7476990800698391
         children [
           DEF Cylinder08 Transform {
             translation 0 -0.005 0
@@ -779,8 +774,6 @@ Robot {
           density -1
           mass 0.05
         }
-        linearVelocity 0.2003426751827851 0.06931678549688536 -5.195468674244833e-05
-        angularVelocity -2.1102829207811853 5.893565506586104 -0.0015601868282671388
       }
     }
     DEF body Transform {
@@ -1339,6 +1332,4 @@ Robot {
   physics Physics {
   }
   controller "box_movement"
-  linearVelocity 0.199672937716789 0.06952299391511074 0.001268083615104212
-  angularVelocity -0.012674975255469267 -0.02578125345915238 0.020817426729143787
 }
