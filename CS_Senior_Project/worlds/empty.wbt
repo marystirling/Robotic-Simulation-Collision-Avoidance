@@ -523,7 +523,7 @@ Robot {
         }
       ]
       endPoint DEF right_wheel Solid {
-        translation 0.025 -0.04599999999999919 -0.0052
+        translation 0.025 -0.04599999999999913 -0.0052
         rotation 0 -1 0 1.3780690362217605
         children [
           DEF Cylinder10 Transform {
@@ -1331,8 +1331,9 @@ Robot {
   }
   physics Physics {
   }
-  controller "box_movement"
+  controller "HelloWorld"
 }
 E-puck {
   translation -0.06 0.24 0
+  controller "epuck_basics"
 }
