@@ -10,7 +10,7 @@ time_step = 64
 MAX_SPEED = 6.28
 
 # speed of robot to spinning in place (in degrees per second)
-ANGULAR_SPEED_DEGREES = 278.237392796
+ANGULAR_SPEED_DEGREES = 283.588111888
 
 start_times = []
 
@@ -44,17 +44,14 @@ def calculate_start_time():
 def rotate_left_in_degrees(degrees):
     rotate_left()
     duration = calculate_rotation_time(degrees)
-    print(f"duration: {duration}")
     start_times.append(robot.getTime())
-    #print("in rotate_left_in_degrees")
-    print(f"start time: {start_times[0]}")
-    while (robot.getTime() < start_times[0] + duration):
-        print(f"current time: {robot.getTime()}")
-        robot.step(time_step)
-        #rotate_left()
-        #rotate_left()
-        #print("rotating left")
+    while True:
+        if (robot.getTime() < start_times[0] + duration):
+            robot.step(time_step)
+        else:
+            break
     stop()
+    
 
 if __name__ == "__main__":
     robot = Robot()
@@ -68,7 +65,6 @@ if __name__ == "__main__":
     while robot.step(time_step) != -1:
         #print("entered while loop")
         #move_forward()
-        rotate_left_in_degrees(360)
+        rotate_left_in_degrees(90)
         #rotate_left()
 
-    
