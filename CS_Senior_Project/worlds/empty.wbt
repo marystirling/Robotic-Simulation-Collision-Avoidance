@@ -25,8 +25,8 @@ WoodenBox {
   size 0.3 0.3 0.1
 }
 Robot {
-  translation 0.11811305895490544 0.003034375459892719 0.03822768144402158
-  rotation 0 1 0 -0.3394864416372947
+  translation 0.1298188643419383 0.0030338564343862645 0.03839168584905457
+  rotation 0.0023016197992199137 -0.9999972224648533 -0.0005075518481929087 0.021271880876734622
   children [
     GPS {
     }
@@ -509,7 +509,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 59.7105140355741
+        position 59.71051381874832
         axis 0 1 0
         anchor 0.025 0 -0.0052
       }
@@ -523,8 +523,8 @@ Robot {
         }
       ]
       endPoint DEF right_wheel Solid {
-        translation 0.025 -0.04599999999999913 -0.0052
-        rotation 0 -1 0 1.3780690362217605
+        translation 0.025 -0.045999999999999076 -0.0052
+        rotation 0 -1 0 1.378069253047543
         children [
           DEF Cylinder10 Transform {
             translation 0 -0.005 0
@@ -641,11 +641,13 @@ Robot {
           density -1
           mass 0.05
         }
+        linearVelocity -7.950675823346635e-07 -2.331889012886031e-08 1.0212939517571639e-06
+        angularVelocity 1.7233401682918672e-07 -1.66599532191733e-05 -1.0232995180123393e-06
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 23.985042148648507
+        position 23.98504236732237
         axis 0 1 0
         anchor 0.025 0 -0.0052
       }
@@ -659,8 +661,8 @@ Robot {
         }
       ]
       endPoint DEF left_wheel Solid {
-        translation 0.025 0.0468861 -0.0052
-        rotation 0 -1 0 0.7476990800698391
+        translation 0.025 0.046886099999999986 -0.0052
+        rotation 0 -1 0 0.7476988613959741
         children [
           DEF Cylinder08 Transform {
             translation 0 -0.005 0
@@ -774,6 +776,8 @@ Robot {
           density -1
           mass 0.05
         }
+        linearVelocity -6.99645575002676e-07 -2.158447024576734e-08 1.037251125385384e-06
+        angularVelocity 1.7264554842734024e-07 -1.2299479293552049e-05 -9.37522476804566e-07
       }
     }
     DEF body Transform {
@@ -1332,8 +1336,15 @@ Robot {
   physics Physics {
   }
   controller "HelloWorld"
+  linearVelocity 3.3035652533096467e-07 -1.85266507842093e-09 5.706845712364159e-07
+  angularVelocity 1.726174567453051e-07 -1.4455618436419762e-05 -9.807101487377267e-07
 }
 E-puck {
-  translation -0.06 0.24 0
-  controller "epuck_basics"
+  hidden position_0_0 3.0956062222787846e-08
+  hidden position_0_1 3.095607800559341e-08
+  hidden rotation_1 0 1 0 2.9802322387695313e-08
+  hidden rotation_2 0 1 0 2.9802322387695313e-08
+  translation -0.0599999999032267 0.2400000000178154 -6.391454876180334e-05
+  rotation 0.9998611875472767 -0.016661501616051125 6.691846052964317e-07 1.1908992260590977e-07
+  controller "e_puck_simple_avoidance"
 }

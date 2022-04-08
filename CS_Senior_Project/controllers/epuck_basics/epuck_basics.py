@@ -65,6 +65,6 @@ if __name__ == "__main__":
     while robot.step(time_step) != -1:
         #print("entered while loop")
         #move_forward()
-        rotate_left_in_degrees(90)
+        rotate_left_in_degrees(2900)
         #rotate_left()
 
