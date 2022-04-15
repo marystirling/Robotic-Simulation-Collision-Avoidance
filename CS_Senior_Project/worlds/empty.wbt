@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
-  position 1.4675176749420966e-06 -1.622297630516403e-07 1.8673684027750999
+  orientation -0.47540758506253794 -0.49837153749953156 0.7249920266288167 4.441354503670171
+  position -0.7756937589290629 0.8701009395456462 2.7207984797585487
 }
 TexturedBackground {
 }
@@ -12,21 +12,78 @@ TexturedBackgroundLight {
 RectangleArena {
   translation 0.19 0 0
   rotation 0 1 0 0
-  floorSize 5 5
+  floorSize 5 3
+  floorAppearance Parquetry {
+    type "light strip"
+  }
   wallHeight 0.4
+}
+Shape {
+  geometry Cylinder {
+    height 0.01
+    radius 0.1
+  }
 }
 WoodenBox {
   translation 1.13 0.02 0.06
   size 0.05 0.05 0.05
 }
 WoodenBox {
-  translation 2.53 -0.34 0.06
+  translation -0.259474 0.324019 0.06
+  rotation 0 0 -1 0.523597
+  name "wooden box(2)"
+  size 0.2 0.2 0.2
+}
+WoodenBox {
+  translation -0.703693 0.540985 0.06
+  rotation 0 0 1 -1.047195307179586
+  name "wooden box(6)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -1.40388 -0.706233 0.06
+  rotation 0 0 1 2.24093e-06
+  name "wooden box(9)"
+  size 0.15 0.15 0.15
+}
+WoodenBox {
+  translation -1.307 0.453309 0.06
+  rotation 0 0 1 0.261802
+  name "wooden box(7)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -1.56859 0.000156836 0.06
+  rotation 0 0 1 0.261802
+  name "wooden box(8)"
+  size 0.133 0.13 0.13
+}
+WoodenBox {
+  translation -0.91 0.18 0.06
+  name "wooden box(3)"
+  size 0.1 0.2 0.2
+}
+WoodenBox {
+  translation -1.16596 -0.192343 0.06
+  rotation 0 0 1 -0.523595307179586
+  name "wooden box(4)"
+  size 0.05 0.3 0.15
+}
+WoodenBox {
+  translation 0.0958942 -0.8379 -3.04
+  rotation 0 0 1 0.523599
+  name "wooden box(5)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -0.138915 -0.353017 0.06
+  rotation 0 0 1 0.523599
   name "wooden box(1)"
   size 0.3 0.3 0.1
 }
 Robot {
-  translation 0.1298188643419383 0.0030338564343862645 0.03839168584905457
-  rotation 0.0023016197992199137 -0.9999972224648533 -0.0005075518481929087 0.021271880876734622
+  translation 1.24984 -1.48916 0.0664508
+  rotation 0.00733526135433757 0.39656999213682925 0.9179751822775267 -0.05355036981651207
   children [
     GPS {
     }
@@ -509,7 +566,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 59.71051381874832
+        position 37.60963608672068
         axis 0 1 0
         anchor 0.025 0 -0.0052
       }
@@ -523,8 +580,8 @@ Robot {
         }
       ]
       endPoint DEF right_wheel Solid {
-        translation 0.025 -0.045999999999999076 -0.0052
-        rotation 0 -1 0 1.378069253047543
+        translation 0.025 -0.0459999999999991 -0.0052
+        rotation 0 1 0 1.6537942436431607
         children [
           DEF Cylinder10 Transform {
             translation 0 -0.005 0
@@ -641,13 +698,11 @@ Robot {
           density -1
           mass 0.05
         }
-        linearVelocity -7.950675823346635e-07 -2.331889012886031e-08 1.0212939517571639e-06
-        angularVelocity 1.7233401682918672e-07 -1.66599532191733e-05 -1.0232995180123393e-06
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 23.98504236732237
+        position 19.99999997256161
         axis 0 1 0
         anchor 0.025 0 -0.0052
       }
@@ -661,8 +716,8 @@ Robot {
         }
       ]
       endPoint DEF left_wheel Solid {
-        translation 0.025 0.046886099999999986 -0.0052
-        rotation 0 -1 0 0.7476988613959741
+        translation 0.025 0.046886099999999944 -0.0052
+        rotation 0 -1 0 4.732741256156735
         children [
           DEF Cylinder08 Transform {
             translation 0 -0.005 0
@@ -776,8 +831,6 @@ Robot {
           density -1
           mass 0.05
         }
-        linearVelocity -6.99645575002676e-07 -2.158447024576734e-08 1.037251125385384e-06
-        angularVelocity 1.7264554842734024e-07 -1.2299479293552049e-05 -9.37522476804566e-07
       }
     }
     DEF body Transform {
@@ -1335,16 +1388,12 @@ Robot {
   }
   physics Physics {
   }
-  controller "HelloWorld"
-  linearVelocity 3.3035652533096467e-07 -1.85266507842093e-09 5.706845712364159e-07
-  angularVelocity 1.726174567453051e-07 -1.4455618436419762e-05 -9.807101487377267e-07
+  controller "my_controller_lidar"
 }
 E-puck {
-  hidden position_0_0 3.0956062222787846e-08
-  hidden position_0_1 3.095607800559341e-08
-  hidden rotation_1 0 1 0 2.9802322387695313e-08
-  hidden rotation_2 0 1 0 2.9802322387695313e-08
-  translation -0.0599999999032267 0.2400000000178154 -6.391454876180334e-05
-  rotation 0.9998611875472767 -0.016661501616051125 6.691846052964317e-07 1.1908992260590977e-07
+  hidden position_0_0 5.948212736933907e-13
+  hidden position_0_1 5.793967178228376e-13
+  translation -1.81 -0.02 -6.39599e-05
+  rotation 0.000738323709194444 0.0004925678059909862 0.9999996061274509 3.46682e-06
   controller "e_puck_simple_avoidance"
 }
